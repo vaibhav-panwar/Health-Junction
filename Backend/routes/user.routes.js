@@ -3,7 +3,7 @@ const { UserModel } = require("../models/user.models");
 const { client } = require("../db/redis");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-require("dotenv").config()
+require("dotenv").config();
 
 const userRouter = express.Router();
 

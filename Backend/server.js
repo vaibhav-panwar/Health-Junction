@@ -10,11 +10,16 @@ app.use(cors());
 const { connect } = require("./db/mongodb");
 const { userRouter } = require("./routes/user.routes");
 const { redisConnect } = require('./db/redis');
-const { userAuth } = require("./middlewares/auth.middleware");
+const { expertRouter } = require("./routes/expert.routes");
 
 app.use("/users", userRouter);
-app.get("/",userAuth,(req, res) => {
-    res.status(200).send("Welcome to Healhub");
+app.use("/experts",expertRouter);
+
+app.get("/",(req, res) => {
+    res.status(200).send({
+        isError:false,
+        message:"this is base point"
+    });
 })
 
 

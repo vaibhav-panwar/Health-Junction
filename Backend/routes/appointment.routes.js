@@ -1,0 +1,56 @@
+const { Router } = require("express");
+const { AppointmentModel } = require("../models/appointment.model");
+const { userAuth, expertAuth } = require("../middlewares/auth.middleware");
+require("dotenv").config();
+
+const appointmentRouter = Router();
+
+appointmentRouter.get("/user", userAuth, async (req, res) => {
+    let { userID } = req.body;
+    try {
+        let data = await AppointmentModel.find({ userID });
+        return res.status(200).send({
+            isError: false,
+            message: "request successfull",
+            data
+        })
+    } catch (error) {
+        return res.status(400).send({
+            isError: true,
+            error: error.message
+        })
+    }
+})
+
+appointmentRouter.get("/expert", expertAuth, async (req, res) => {
+    let { expertID } = req.body;
+    try {
+        let data = await AppointmentModel.find({ expertID });
+        return res.status(200).send({
+            isError: false,
+            message: "request successfull",
+            data
+        })
+    } catch (error) {
+        return res.status(400).send({
+            isError: true,
+            error: error.message
+        })
+    }
+})
+
+appointmentRouter.patch("/expert/:appointmentID", expertAuth, async (req, res) => {
+    let id = req.params.appointmentID;
+    try {
+        await AppointmentModel.findByIdAndUpdate(id, req.body);
+        res.status(200).send({
+            isError: false,
+            message: "appointment updated successfully"
+        })
+    } catch (error) {
+        return res.status(400).send({
+            isError: true,
+            error: error.message
+        })
+    }
+})
