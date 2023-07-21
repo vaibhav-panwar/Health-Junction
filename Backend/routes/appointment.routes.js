@@ -5,6 +5,24 @@ require("dotenv").config();
 
 const appointmentRouter = Router();
 
+appointmentRouter.post("/create",userAuth,async(req,res)=>{
+    let {userID,expertID,start,end,status} = req.body;
+    try {
+        let data = new AppointmentModel({userID,expertID,start,end,status});
+        await data.save()
+        return res.status(200).send({
+            isError:false,
+            message:"appointment created successfully",
+            data
+        })
+    } catch (error) {
+       return res.status(400).send({
+            isError: true,
+            error: error.message
+        })
+    }
+})
+
 appointmentRouter.get("/user", userAuth, async (req, res) => {
     let { userID } = req.body;
     try {
@@ -54,3 +72,5 @@ appointmentRouter.patch("/expert/:appointmentID", expertAuth, async (req, res) =
         })
     }
 })
+
+module.exports = {appointmentRouter};
