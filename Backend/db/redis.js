@@ -5,7 +5,7 @@ const client = createClient({
     password: process.env.redisPass,
     socket: {
         host: process.env.redisURL,
-        port: process.env.redisPort
+        port: Number(process.env.redisPort)
     }
 });
 
