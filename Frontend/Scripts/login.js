@@ -12,7 +12,6 @@ const login = () => {
         body: JSON.stringify(payload)
     }).then(res => res.json()).then(res => {
         alert(res.message);
-        //console.log(res);
         let token = res.token;
         localStorage.setItem("token",token);
     }).catch(err => {
