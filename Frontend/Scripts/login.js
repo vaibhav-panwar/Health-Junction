@@ -11,7 +11,8 @@ const login = () => {
         },
         body: JSON.stringify(payload)
     }).then(res => res.json()).then(res => {
-        alert(res.message);
+        console.log(res);
+        // alert(res.message);
         let token = res.token;
     }).catch(err => {
         alert(err.error);
