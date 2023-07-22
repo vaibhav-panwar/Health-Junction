@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            overflow-x: hidden;
+        }
+        #container{
+            width: 100%;
+            background-color: whitesmoke;
+        }
+        #down_con{
+            margin: auto;
+            padding-top:50px;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 20px 20px;
+        }
+        #down_con>div{
+            margin: auto;
+          width: 100%;
+          height: auto;
+          padding: 5px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          background-color: rgb(237, 240, 240);
+          padding: 10px 10px;
+        }
+        #down_con>div>img{
+        width: 100%;
+        height: auto;
+        }
+        h3{
+            color: blue;
+        }
+        #bottom{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;margin: auto; 
+            font-style: oblique;
+        }
+        @media  all and (min-width:768px) and (max-width:1023px){
+            #down_con{
+                grid-template-columns: repeat(2,1fr);
+            }
+            #bottom{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media all and (min-width:340px) and (max-width:767px) {
+            #down_con{
+                grid-template-columns: repeat(1,1fr);
+            }
+            #bottom{
+                display: flex;
+                flex-direction: column;
+            }
+            /* #down_con>div{
+                margin-left: 20px;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./top.png" alt="">
+<div id="down_con">
+        <div>
+            <img src="./img1.jpg.webp" alt="">
+            <h3>therapies</h3>
+            <p style="font-style: oblique;font-size:xx-large;">Discovering Relief- How Osteopathic Treatment Can Help Relieve Headache Pain</p>
+        </div>
+        <div>
+            <img src="./img2.jpg.webp" alt="">
+            <h3>therapies</h3>
+            <p style="font-style: oblique;font-size:xx-large;">The C2 Vertebra: How A Tiny Vertebra Can Impact Your Entire Well-Being</p>
+        </div>
+        <div>
+            <img src="./img3.webp" alt="">
+            <h3>therapies</h3>
+            <p style="font-style: oblique;font-size:xx-large;">Hanging Off One Hip-A Common Posture Mistake During Ramadan For UAE Residents</p>
+        </div>
+        <div>
+            <img src="./img4.webp" alt="">
+            <h3>Biohacking</h3>
+            <p style="font-style: oblique;font-size:xx-large;">Texting Neck – A Common Posture Mistake During Ramadan For UAE Residents</p>
+        </div>
+        <div>
+            <img src="./img5.webp" alt="">
+            <h3>Biohacking</h3>
+            <p style="font-style: oblique;font-size:xx-large;">Top 5 Health Benefits Of Fasting During Ramadan For UAE Residents</p>
+        </div>
+        <div>
+            <img src="./img6.webp" alt="">
+            <h3>Biohacking</h3>
+            <p style="font-style: oblique;font-size:xx-large;">Uncovering The Benefits Of Proper Sauna Protocol: How To Maximize Your Sauna Experience</p>
+        </div>
+    </div>
+    <div id="bottom">
+        <h2>Terms & Conditions</h2>
+        <h2>Cancellation & No-Show policy</h2>
+        <h2>Refund policy</h2>
+        <h2>Privacy and Cookies Policy</h2>
+
+    </div>
+</div>
+</body>
+</html>

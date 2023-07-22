@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top_img{
+            margin-bottom: 35px;
+        }
+        #top_img>img{
+            width: 100%;
+            height: auto;
+        }
+        #container{
+            margin: auto;
+            width: 90%;
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+           gap: 10px 10px;
+        }
+        #container>img{
+            width: 100%;
+        }
+       @media all and (min-width:768px) and (max-width:1023px) {
+        #container{
+            grid-template-columns:repeat(2,1fr) ;
+        }
+       }
+       @media  all and (min-width:340px) and (max-width:767px){
+        #container{
+            grid-template-columns: 1fr;
+        }
+       }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="top_img">
+        <img src="./top.png" alt="">
+    </div>
+    <div id="container">
+          <img src="./who-are-we-500x500.jpg.webp" alt="">
+          <img src="./Why-Call-ourselves-500x500.jpg.webp" alt="">
+          <img src="./The-Facility-500x500.jpg.webp" alt="">
+          <img src="./ikigai-500x500.jpg.webp" alt="">
+          <img src="./Our-actions-500x500.jpg.webp" alt="">
+          <img src="./Our-Community-500x500.jpg.webp" alt="">
+
+    </div>
+</div>
+</body>
+</html>
