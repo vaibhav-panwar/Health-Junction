@@ -5,20 +5,29 @@ require("dotenv").config();
 
 const appointmentRouter = Router();
 
-appointmentRouter.post("/create",userAuth,async(req,res)=>{
-    let {userID,expertID,start,end,status} = req.body;
-    try {
-        let data = new AppointmentModel({userID,expertID,start,end,status});
-        await data.save()
-        return res.status(200).send({
-            isError:false,
-            message:"appointment created successfully",
-            data
-        })
-    } catch (error) {
-       return res.status(400).send({
+appointmentRouter.post("/create", userAuth, async (req, res) => {
+    let { userID, expertID, date, slot } = req.body;
+    let a = await AppointmentModel.findOne({ expertID, date, slot });
+    if (!a) {
+        try {
+            let data = new AppointmentModel({ userID, expertID, date, slot });
+            await data.save()
+            return res.status(200).send({
+                isError: false,
+                message: "appointment created successfully",
+                data
+            })
+        } catch (error) {
+            return res.status(400).send({
+                isError: true,
+                error: error.message
+            })
+        }
+    }
+    else {
+        return res.status(400).send({
             isError: true,
-            error: error.message
+            error: "this slot is already booked"
         })
     }
 })

@@ -9,22 +9,28 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    start: {
+    date: {
         type: Date,
         required: true
     },
-    end: {
-        type: Date,
-        required: true
-    },
-    status:{
-        type:String,
-        enum:{
-            values:["pending","confirm","cancel"],
-            message:["incorrect status"]
+    slot: {
+        type: String,
+        enum: {
+            values: ["9-10", "10-11", "11-12", "12-1", "1-2", "2-3", "3-4", "4-5"],
+            message: "enter correct slot"
         },
-        default:"pending"
+        required: true
+    },
+    status: {
+        type: String,
+        enum: {
+            values: ["pending", "confirm", "cancel"],
+            message: ["incorrect status"]
+        },
+        default: "pending"
     }
+}, {
+    versionKey: false
 })
 
 const AppointmentModel = mongoose.model("appointment",appointmentSchema);

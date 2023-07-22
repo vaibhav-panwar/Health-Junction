@@ -11,6 +11,7 @@ expertRouter.get("/", async (req, res) => {
         let data = await ExpertModel.find();
         let arr = data.map((el) => {
             return {
+                id: el._id,
                 name: el.name,
                 age: el.age,
                 gender: el.gender,
@@ -37,6 +38,7 @@ expertRouter.get("/:specialisation", async (req, res) => {
         let data = await ExpertModel.find({ specialisation });
         let arr = data.map((el) => {
             return {
+                id: el._id,
                 name: el.name,
                 age: el.age,
                 gender: el.gender,
