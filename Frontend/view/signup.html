@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Styles/signup.css">
+  <title>Make an account</title>
+</head>
+
+<body>
+  <div class="container">
+    <form class="form-1">
+      <h1>Make an account with Heal Junction</h1>
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required />
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" required />
+      <label for="gender" id="gender" style="margin-top: 20px; margin-bottom: 20px;">Gender
+        <label for="male"><input type="radio" name="gender" value="male">Male</label>
+        <label for="female"><input type="radio" name="gender" value="female">Female</label></label>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <button onclick="signup()">Sign-Up</button>
+
+      <!-- .........///Login///.......... -->
+
+      <a href="./login.html">
+        <p>Aready have an account?</p>
+      </a>
+    </form>
+  </div>
+</body>
+<script src="../Scripts/signup.js"></script>
+
+</html>
