@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.heading {
+    text-align: center;
+    margin: 30px;
+    font-size: 50px;
+    color: rgb(10, 151, 137)
+}
+
+.ser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.column>button {
+    margin: 15px;
+    padding: 30px 60px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    font-size: 30px;
+    color: rgb(38, 43, 48);
+    background-color: antiquewhite
+}
+
+.column>button:hover {
+    color: blue;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+
+div>img {
+    max-width: 100%;
+    height: auto;
+}
+
+#fImage {
+    max-width: 100%;
+    height: 50vh;
+    /* Set a percentage-based height for the slideshow container */
+    overflow: hidden;
+    /* Hide any overflowing content */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    overflow: hidden;
+}
+
+#fImage img {
+    max-width: 100%;
+    height: 100%;
+    /* Ensure the image fills the entire container height */
+    /* object-fit: cover; Scale the image to cover the container while preserving aspect ratio */
+    display: block;
+    /* Optional: To remove any extra spacing below the image */
+
+}
+
+.health img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.three {
+    margin-top: 10px;
+    padding: 40px;
+    ;
+    text-align: center;
+    background-color: rgb(240, 236, 232);
+}
+
+.three h1 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.three p {
+    font-size: 20px;
+
+}
+
+.four {
+    margin-top: 10px;
+    padding: 40px;
+    ;
+    text-align: center;
+    background-color: rgb(140, 243, 183);
+}
+
+.four h1 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.four p {
+    font-size: 20px;
+
+}
+
+/* Media Query for responsive layout */
+@media (max-width: 950px) {
+    .column {
+        margin: 5px;
+    }
+
+    .ser {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+}
