@@ -4,16 +4,16 @@ const login = () => {
         password: document.getElementById("password").value,
     }
 
-    fetch("https://localhost:8080/users/login", {
+    fetch("http://localhost:8080/users/login", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
         },
         body: JSON.stringify(payload)
     }).then(res => res.json()).then(res => {
-        console.log(res);
-        // alert(res.message);
+        alert(res.message);
         let token = res.token;
+        localStorage.setItem("token",token);
     }).catch(err => {
         alert(err.error);
     })
