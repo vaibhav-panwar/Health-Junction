@@ -1,3 +1,6 @@
+let slotDate;
+let slotExpert;
+let slotTime;
 // calender js
 
 const daysTag = document.querySelector(".days"),
@@ -54,13 +57,14 @@ function jmd() {
     arr.forEach((el) => {
         el.addEventListener("click", (e) => {
             e.preventDefault();
-            let date = new Date(`${currYear}-${currMonth+1}-${el.value}`);
+            let date = new Date(`${currYear}-${currMonth + 1}-${el.value}`);
             let cDate = new Date();
             if (date >= cDate) {
                 for (let i = 0; i < arr.length; i++) {
                     arr[i].classList.remove("jmd");
                 }
-                el.classList.add("jmd")
+                el.classList.add("jmd");
+                slotDate = date;
             }
             else {
                 alert("select date correctly")
@@ -69,3 +73,89 @@ function jmd() {
     })
 }
 
+let selectService = document.getElementById("service");
+let selectExpert = document.getElementById("expert");
+let selectSlot = document.getElementById("slot");
+selectService.addEventListener("change", (e) => {
+    e.preventDefault();
+    if (selectService.value) {
+        serviceValues(selectService.value);
+    }
+})
+
+selectExpert.addEventListener("change", (e) => {
+    e.preventDefault();
+    slotExpert = selectExpert.value
+})
+
+selectSlot.addEventListener("change", (e) => {
+    e.preventDefault();
+    slotTime = selectSlot.value;
+})
+
+document.getElementById("book").addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!slotDate) {
+        alert("please select date");
+        return
+    }
+    if (!slotExpert) {
+        alert("please select your expert");
+        return
+    }
+    if (!slotTime) {
+        alert("please select your slot");
+        return
+    }
+    let obj = {
+        expertID: slotExpert,
+        date: slotDate,
+        slot: slotTime
+    }
+    fetch("http://localhost:8080/appointments/create", {
+        method: "POST",
+        headers: {
+            "Content-type": "Application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NGI5ZjMxMmJkMjcxZGFlN2NjZGI3NjUiLCJlbWFpbCI6InAudmFpYmhhdjc0OTlAZ21haWwuY29tIiwiaWF0IjoxNjkwMDU0ODM3LCJleHAiOjE2OTAxNDEyMzd9.oxGsMEGt6sHYo9NL7LrYrHCugs0zv1xrx-qcJyPYnkY"
+        },
+        body: JSON.stringify(obj)
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.isError) {
+                alert(data.message);
+            }
+            else {
+                alert(data.error)
+            }
+        })
+        .catch((err) => {
+            alert(err);
+        });
+})
+
+function serviceValues(value) {
+    selectExpert.innerHTML = "";
+    fetch(`http://localhost:8080/experts/${value}`)
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.isError) {
+                let b = document.createElement("option");
+                b.setAttribute("value", "");
+                b.innerText = "Select Expert";
+                selectExpert.append(b);
+                data.data.forEach((el) => {
+                    let a = document.createElement("option");
+                    a.setAttribute("value", el.id);
+                    a.innerText = el.name;
+                    selectExpert.append(a);
+                })
+            }
+            else {
+                alert(data.error)
+            }
+        })
+        .catch((err) => {
+            alert(err)
+        })
+}
