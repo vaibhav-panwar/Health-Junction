@@ -83,3 +83,8 @@ window.addEventListener("load", function () {
 slideshow(slide)
 // add event-listeners;
 });
+
+document.getElementById("el").addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href = "./view/expertLogIn.html"
+})

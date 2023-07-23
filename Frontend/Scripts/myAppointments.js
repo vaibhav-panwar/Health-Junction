@@ -93,7 +93,9 @@ function createCard(date, status, slot, id, expert, service) {
         e.preventDefault();
         cancelAppointment(id);
     })
-    card.append(btn);
+    if (status == "pending") {
+        card.append(btn);
+    }
     return card
 }
 
