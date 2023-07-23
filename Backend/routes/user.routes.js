@@ -54,7 +54,11 @@ userRouter.post("/login", async (req, res) => {
                 return res.status(200).send({
                     isError: false,
                     message: "user logged in successfully",
-                    token
+                    token,
+                    data:{
+                        name:user.name,
+                        email:user.email
+                    }
                 })
             }
         } else {
