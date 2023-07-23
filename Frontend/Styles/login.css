@@ -3,78 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.container {
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
-    background: linear-gradient(to right, #25aae1, #45def6, #4beae5, #15e2c0);
+body{
+    background-color: #9B59B6;
 }
-
-.container .form-1 {
+form{
+    width: fit-content;
+    height: 45vh;
+    margin: auto;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    width: 40%;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-.form-1 h1 {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 1.5rem;
-    color: #ff8674;
+.element{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-
-input[type="email"],
-input[type="password"] {
+.element>label{
+    font-size: 25px;
+    width: 200px;
+}
+.element>input{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 18px;    
+}
+#sub{
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
     border: none;
     outline: none;
-    border-bottom: 1px solid;
-    background: none;
-    margin: 0.9rem 2rem;
-    font-size: 1rem;
-    padding: 5px;
+    border-radius: 5px;
+    background-color: #9B59B6;
+    color: white;
 }
-
-label {
-    margin: 0 2rem;
-}
-
-span {
-    margin: 0 2rem;
-    color: blue;
+#sub{
     cursor: pointer;
 }
-
-button {
-    margin: 2rem;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-radius: 1rem;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    color: #fff;
-    background: linear-gradient(to right, #25aae1, #45def6, #4beae5, #15e2c0);
-}
-
-/* ........///Sign-Up///......... */
-
-p {
-    text-align: center;
-    font-weight: bolder;
-    color: green;
-    margin-bottom: 10px;
-}
-
-
 
 /* ....///Media query///..... */
 

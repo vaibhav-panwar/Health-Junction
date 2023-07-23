@@ -1,3 +1,40 @@
+//token check
+window.onload = tokenCheck();
+function tokenCheck(){
+    let token = localStorage.getItem("userToken");
+    if(!token){
+        window.location.href = "./login.html"
+    }
+    else{
+        document.getElementById("login").remove()
+        document.getElementById("signup").remove()
+        let name = localStorage.getItem("userName");
+        let li1 = document.createElement("li");
+        let a1 = document.createElement("a");
+        a1.innerText = name;
+        a1.setAttribute("href", "#");
+        a1.classList.add("navbar-link");
+        li1.setAttribute("id", "username");
+        li1.append(a1);
+        let li2 = document.createElement("li");
+        let a2 = document.createElement("a");
+        a2.innerText = "Log Out";
+        a2.setAttribute("href", "#");
+        a2.classList.add("navbar-link");
+        li2.setAttribute("id", "logout");
+        li2.append(a2);
+        li2.addEventListener("click",(e)=>{
+            e.preventDefault();
+            localStorage.setItem("userToken","");
+            localStorage.setItem("userName","");
+            location.reload();
+        })
+        document.querySelector(".navbar-list").append(li1, li2);
+    }
+}
+
+
+/////////////////////////////////////
 let slotDate;
 let slotExpert;
 let slotTime;
@@ -116,7 +153,7 @@ document.getElementById("book").addEventListener("click", (e) => {
         method: "POST",
         headers: {
             "Content-type": "Application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NGI5ZjMxMmJkMjcxZGFlN2NjZGI3NjUiLCJlbWFpbCI6InAudmFpYmhhdjc0OTlAZ21haWwuY29tIiwiaWF0IjoxNjkwMDU0ODM3LCJleHAiOjE2OTAxNDEyMzd9.oxGsMEGt6sHYo9NL7LrYrHCugs0zv1xrx-qcJyPYnkY"
+            "Authorization": `Bearer ${localStorage.getItem("userToken")}`
         },
         body: JSON.stringify(obj)
     })

@@ -128,6 +128,7 @@ header .current-date {
     align-items: center;
     justify-content: center;
     height: 82.5vh;
+    background-color: #9B59B6;
 }
 
 #cont2 {
