@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const appointmentSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+const appointmentSchema = new Schema({
     userID: {
         type: String,
         required: true
@@ -28,6 +29,14 @@ const appointmentSchema = new mongoose.Schema({
             message: ["incorrect status"]
         },
         default: "pending"
+    },
+    userDetails:{
+        type: Schema.Types.Mixed , 
+        required:true
+    },
+    expertDetails: {
+        type: Schema.Types.Mixed,
+        required: true
     }
 }, {
     versionKey: false
