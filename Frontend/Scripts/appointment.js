@@ -12,7 +12,7 @@ function tokenCheck(){
         let li1 = document.createElement("li");
         let a1 = document.createElement("a");
         a1.innerText = name;
-        a1.setAttribute("href", "#");
+        a1.setAttribute("href", "./myAppointments.html");
         a1.classList.add("navbar-link");
         li1.setAttribute("id", "username");
         li1.append(a1);
@@ -94,7 +94,8 @@ function jmd() {
     arr.forEach((el) => {
         el.addEventListener("click", (e) => {
             e.preventDefault();
-            let date = new Date(`${currYear}-${currMonth + 1}-${el.value}`);
+            console.log(el.value);
+            let date = new Date(`${currYear}-${currMonth + 1}-${el.value+1}`);
             let cDate = new Date();
             if (date >= cDate) {
                 for (let i = 0; i < arr.length; i++) {

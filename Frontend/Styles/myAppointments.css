@@ -1,0 +1,39 @@
+#bigcont {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+
+.date,
+.status,
+.slot,.canc,.expert,.service{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.canc{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: #9B59B6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.canc:hover{
+    cursor: pointer;
+}
+
+#hd{
+    font-size: 30px;
+    width: fit-content;
+    margin: auto;
+}

@@ -9,7 +9,7 @@ function tokenCheck() {
     let li1 = document.createElement("li");
     let a1 = document.createElement("a");
     a1.innerText = name;
-    a1.setAttribute("href", "#");
+    a1.setAttribute("href", "./view/myAppointments.html");
     a1.classList.add("navbar-link");
     li1.setAttribute("id", "username");
     li1.append(a1);
