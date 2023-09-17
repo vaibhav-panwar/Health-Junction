@@ -50,11 +50,15 @@ Here are some screenshots showcasing the different aspects of the Multilayer Che
 
    ![User Dashboard](Screenshots/userdashboard.PNG)
 
-7.  **Expert Login**: Click on this link in footer to login as expert and access expert dashboard .
+7.**My Appointments**: See your appointments and their status .
+
+   ![User Dashboard](Screenshots/myappointments.PNG)
+
+8.  **Expert Login**: Click on this link in footer to login as expert and access expert dashboard .
 
    ![Expert Login](Screenshots/expertlogin.PNG)
 
-8. **Expert dashboard**: This is how expert dashboard looks lik
+9. **Expert dashboard**: This is how expert dashboard looks lik
 
    ![Expert Dashboard](Screenshots/expertdashboard.PNG)
    
