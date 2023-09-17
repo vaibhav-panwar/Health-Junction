@@ -13,7 +13,7 @@ The project is built using a variety of technologies to ensure smooth functional
 - **Frontend**: The frontend is developed using **HTML**,**CSS** and **Javascript** . 
 
 - **Backend**: The backend is powered by **Node.js** and **Express.js**, providing a robust server structure.
-- 
+  
 - **Database**: The game's data, user profiles, and game history are stored in a **MongoDB** database. This allows for efficient data management and retrieval.
 
 ## Deployment Links
