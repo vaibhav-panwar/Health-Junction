@@ -1,7 +1,5 @@
 # Health Junction
 
-![Chess](Screenshots/logo.png)
-
 Welcome to the README for the Health Junction project! This document provides an overview of the project, the technology stack used, deployment links, and includes screenshots to help you understand the project better.
 
 ## Introduction
@@ -28,31 +26,40 @@ The project is built using a variety of technologies to ensure smooth functional
 
 Here are some screenshots showcasing the different aspects of the Multilayer Chess Game:
 
-1. **Homepage**: The landing page provides contains login and SignUp option for the game.
+1. **Homepage**: The landing page provides info of the plans and services we provide.
 
    ![Homepage](Screenshots/homepage.PNG)
 
-2. **Options**:After login you get two options to play , play with a friend and playe with computer bot
+2. **About**:About page gives info about the experts/doctors you can book appointment with.
 
-   ![Options](Screenshots/options.PNG)
+   ![About](Screenshots/about.PNG)
 
-3. **Game Lobby**: Players can create or join game rooms in the lobby also they can enter their gamin username.
+3. **Blogs**: Learn more about your problems and health by reading bolgs by our experts.
 
-   ![Game Lobby](Screenshots/lobby.PNG)
+   ![Blogs](Screenshots/blogs.PNG)
 
-4. **Chessboard**: The interactive chessboard allows players to make moves seamlessly.
+4. **Signup**: Signup on our website to experience our services.
 
-   ![Chessboard](Screenshots/chessboard.PNG)
+   ![Signup](Screenshots/signup.PNG)
 
-5. **Interaction**: Players can also chat and share video with each other.
+5. **Book Appointment**: Book your appointment with experts by selecting your prefferable date , service ,expert and time slots.
 
-   ![Interaction](Screenshots/interaction.PNG)
+   ![Book Appointment](Screenshots/bookappointment.PNG)
 
-6. **Chess Bot**: You can also play with computer chess bot in real time.
+6. **User Dashboard**: See your appointments and their status by clicking on your username present in the nav bar .
 
-   ![Chess-Bot](Screenshots/ai-chessbot.PNG)
+   ![User Dashboard](Screenshots/userdashboard.PNG)
 
-Feel free to explore the deployed links to experience the Multilayer Chess Game firsthand!
+7.  **Expert Login**: Click on this link in footer to login as expert and access expert dashboard .
+
+   ![Expert Login](Screenshots/expertlogin.PNG)
+
+8. **Expert dashboard**: This is how expert dashboard looks lik
+
+   ![Expert Dashboard](Screenshots/expertdashboard.PNG)
+   
+
+Feel free to explore the deployed links .
 
 ## Get Started
 
@@ -64,7 +71,3 @@ To run the project locally, follow these steps:
 4. Start the development server: `npm start`
 
 Make sure to configure the backend URL in the frontend code for local development.
-
----
-
-We hope you enjoy playing the Multilayer Chess Game as much as we enjoyed building it! If you have any questions, feedback, or issues, please don't hesitate to [contact us](p.vaibhav7499@gmail.com). Happy gaming!
