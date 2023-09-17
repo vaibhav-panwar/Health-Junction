@@ -1,3 +1,3 @@
-# puny-potato-4945
-<h2>Healing Junction</h2>
+# Health Junction
+
 Deployed Link-https://health-junction07.netlify.app/
