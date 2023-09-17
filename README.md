@@ -48,7 +48,7 @@ Here are some screenshots showcasing the different aspects of the Multilayer Che
 
 6. **User Dashboard**: See your appointments and their status by clicking on your username present in the nav bar .
 
-   ![User Dashboard](Screenshots/userdashboard.PNG)
+   ![User Dashboard](Screenshots/userdashboard.png)
 
 7.**My Appointments**: See your appointments and their status .
 
@@ -56,7 +56,7 @@ Here are some screenshots showcasing the different aspects of the Multilayer Che
 
 8.  **Expert Login**: Click on this link in footer to login as expert and access expert dashboard .
 
-   ![Expert Login](Screenshots/expertlogin.PNG)
+   ![Expert Login](Screenshots/expertlogin.png)
 
 9. **Expert dashboard**: This is how expert dashboard looks lik
 
